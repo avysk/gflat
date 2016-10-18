@@ -26,7 +26,7 @@ library name.
 After you have specified desired names, run `make populate` and let it run till
 the end. That's it.
 
-## What will I get?
+## What will you get?
 
 Three projects:
 * the library is `src/lib`
