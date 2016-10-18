@@ -4,7 +4,7 @@
 
 GFlat is a very easy to use scaffolding solution for simple F# projects. It uses
 [Paket](https://github.com/fsprojects/Paket),
-[FAKE](https://fsharp.github.io/FAKE/)e and
+[FAKE](https://fsharp.github.io/FAKE/) and
 [Forge](https://github.com/fsharp-editing/Forge). These tools, while powerful,
 may be not straightforward to use; GFlat is not powerful but allows you to start
 with F# project in a very straightforward manner.
