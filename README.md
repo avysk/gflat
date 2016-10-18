@@ -2,7 +2,7 @@
 
 ## What is it
 
-GFlat is a very easy to use scaffolding solution for simple F# projects. It uses
+GFlat is a very easy to use scaffolding solution for simple Mono / F# projects. It uses
 [Paket](https://github.com/fsprojects/Paket),
 [FAKE](https://fsharp.github.io/FAKE/) and
 [Forge](https://github.com/fsharp-editing/Forge). These tools, while powerful,
@@ -11,7 +11,7 @@ with F# project in a very straightforward manner.
 
 ## Assumptions
 
-You are using `mono`, have working `make` and ready to download half of the
+You are using `mono`, have working `make`, `w3m` and ready to download half of the
 Internet.
 
 ## How to use
@@ -51,10 +51,9 @@ case of any warnings.
 
 ## Example of usage
 
-1. `make populate`
-        ...runs for ages, downloads half of the internet; in the process you
-        will see some ignored errors from Forge...
-        ```
+1. `make populate` (...runs for ages, downloads half of the internet; in the process you 
+will see some ignored errors from Forge...)
+        
         Done.
         Ignored errors are safe to ignore.
 
@@ -63,9 +62,9 @@ case of any warnings.
         Tests source code is in src/test/Lib.Test/Lib.Test.fs
         Try 'make test' now.
         Happy hacking!
-        ```
- 2. `tree src`
-        ```
+
+2. `tree src`
+
         src
         ├── app
         │   └── Program
@@ -85,29 +84,26 @@ case of any warnings.
                 └── paket.references
 
         6 directories, 10 files
-        ```
- 3. `make build && ls build/`
-        ...some noise...
-        ```
+
+3. `make build && ls build/` (...some noise...)
+
         FSharp.Core.dll    Lib.dll.mdb        Program.exe.config
         Lib.dll            Program.exe        Program.exe.mdb
-        ```
- 4. `make run` (should calculate 3 squared)
-        ...some noise...
-        ```
+
+4. `make run` (should calculate 3 squared) (...some noise...)
+
         9
-        ```
- 5. `make test`
-        ...some noise...
-        ```
+
+5. `make test` (...some noise...)
+
         1) Failed : Lib.Test.Example Test
           Expected: 3
           But was:  4
-        ```
-        ...more noise...
+
+...more noise...
  
- ## Disclaimer
+## Disclaimer
  
- I did this only to simplify the things for myself when playing with F#. Tested
- only on Mac. If it works for you and you find it useful -- great! If not,
- report the problem and I may have a look. Or send a patch.
+I did this only to simplify the things for myself when playing with F#. Tested
+only on Mac. If it works for you and you find it useful -- great! If not,
+report the problem and I may have a look. Or send a patch.
