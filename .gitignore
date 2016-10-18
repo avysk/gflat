@@ -1,0 +1,12 @@
+.fake/
+.forge/
+.paket/
+
+packages/
+
+build/
+test/
+src/**/bin/
+src/**/obj/
+
+.*.swp
