@@ -2,7 +2,7 @@
 
 ## What is it
 
-GFlat is a very easy to use scaffolding solution for simple F# projects. It uses
+GFlat is a very easy to use scaffolding solution for simple Mono / F# projects. It uses
 [Paket](https://github.com/fsprojects/Paket),
 [FAKE](https://fsharp.github.io/FAKE/) and
 [Forge](https://github.com/fsharp-editing/Forge). These tools, while powerful,
@@ -11,7 +11,7 @@ with F# project in a very straightforward manner.
 
 ## Assumptions
 
-You are using `mono`, have working `make` and ready to download half of the
+You are using `mono`, have working `make`, `w3m` and ready to download half of the
 Internet.
 
 ## How to use
