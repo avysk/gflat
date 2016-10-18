@@ -106,8 +106,8 @@ will see some ignored errors from Forge...
 
 ...more noise...
  
- ## Disclaimer
+## Disclaimer
  
- I did this only to simplify the things for myself when playing with F#. Tested
- only on Mac. If it works for you and you find it useful -- great! If not,
- report the problem and I may have a look. Or send a patch.
+I did this only to simplify the things for myself when playing with F#. Tested
+only on Mac. If it works for you and you find it useful -- great! If not,
+report the problem and I may have a look. Or send a patch.
