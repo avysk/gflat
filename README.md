@@ -47,10 +47,8 @@ Four targets for `make`:
 
 ## Example of usage
 
-1. `make populate`
-
-...runs for ages, downloads half of the internet; in the process you 
-will see some ignored errors from Forge...
+1. `make populate` (...runs for ages, downloads half of the internet; in the process you 
+will see some ignored errors from Forge...)
         
         Done.
         Ignored errors are safe to ignore.
@@ -61,7 +59,7 @@ will see some ignored errors from Forge...
         Try 'make test' now.
         Happy hacking!
 
- 2. `tree src`
+2. `tree src`
 
         src
         ├── app
@@ -83,22 +81,16 @@ will see some ignored errors from Forge...
 
         6 directories, 10 files
 
- 3. `make build && ls build/`
- 
-...some noise...
+3. `make build && ls build/` (...some noise...)
 
         FSharp.Core.dll    Lib.dll.mdb        Program.exe.config
         Lib.dll            Program.exe        Program.exe.mdb
 
- 4. `make run` (should calculate 3 squared)
- 
-...some noise...
+4. `make run` (should calculate 3 squared) (...some noise...)
 
         9
 
- 5. `make test`
-
-...some noise...
+5. `make test` (...some noise...)
 
         1) Failed : Lib.Test.Example Test
           Expected: 3
