@@ -1,7 +1,11 @@
 #r "packages/FAKE/tools/FakeLib.dll"
+#r "packages/FSharpLint.Fake/tools/FSharpLint.Core.dll"
+#r "packages/FSharpLint.Fake/tools/FSharpLint.Fake.dll"
 
 open Fake
 open Fake.Testing
+
+open FSharpLint.Fake
 
 let buildDir = "build/"
 let testDir = "test/"
@@ -13,21 +17,29 @@ let buildRefs =
 let testRefs =
   !! "/src/test/**/*.fsproj"
 
+let allRefs =
+  !! "src/**/*.fsproj"
+
 Target "Clean" (fun _ ->
   CleanDirs [buildDir; testDir]
+)
+
+Target "Lint" (fun _ ->
+  allRefs |> Seq.iter (FSharpLint (fun options ->
+                                   {options with FailBuildIfAnyWarnings=true}))
 )
 
 Target "BuildApp" (fun _ ->
   MSBuildDebug buildDir "Build" buildRefs
   |> Log "Build output: "
 )
-"Clean" ==> "BuildApp"
+"Clean" ==> "Lint" ==> "BuildApp"
 
 Target "ReleaseApp" (fun _ ->
   MSBuildRelease buildDir "Build" buildRefs
   |> Log "Release build output: "
 )
-"Clean" ==> "ReleaseApp"
+"Clean" ==> "Lint" ==> "ReleaseApp"
 
 Target "BuildTest" (fun _ ->
   MSBuildDebug testDir "Build" testRefs

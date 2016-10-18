@@ -45,6 +45,10 @@ Four targets for `make`:
   [NUnit3](http://nunit.org/) console runner.
 * `make release` builds the release (i.e. non-debug) version of the application. 
 
+Notice that the source code will be checked by
+[FSharpLint](http://fsprojects.github.io/FSharpLint/) and the build will fail in
+case of any warnings.
+
 ## Example of usage
 
 1. `make populate`
